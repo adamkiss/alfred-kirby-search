@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.adamkiss.kirby.search</string>
+	<key>category</key>
+	<string>Web Shortcuts</string>
+	<key>connections</key>
+	<dict/>
+	<key>createdby</key>
+	<string>Adam Kiss</string>
+	<key>description</key>
+	<string>An ultra-fast Kirby docs search workflow</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Kirby Docs Search</string>
+	<key>objects</key>
+	<array/>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict/>
+	<key>webaddress</key>
+	<string>https://adamkiss.com</string>
+</dict>
+</plist>

@@ -1,0 +1,15 @@
+{
+    "name": "adamkiss/alfred-kirby-docs",
+    "description": "An ultra-fast Kirby Docs workflow for Alfred",
+    "type": "project",
+    "require": {
+        "algolia/algoliasearch-client-php": "^3.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Kiss",
+            "email": "iam@adamkiss.com"
+        }
+    ]
+}
