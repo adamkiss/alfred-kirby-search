@@ -7,7 +7,21 @@
 	<key>category</key>
 	<string>Web Shortcuts</string>
 	<key>connections</key>
-	<dict/>
+	<dict>
+		<key>F95DB7AE-82E7-4F5B-A7A2-23148205DF9D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4660B802-A6C8-46CA-B48B-528D8A06D03B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
 	<key>createdby</key>
 	<string>Adam Kiss</string>
 	<key>description</key>
@@ -17,11 +31,95 @@
 	<key>name</key>
 	<string>Kirby Docs Search</string>
 	<key>objects</key>
-	<array/>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>4660B802-A6C8-46CA-B48B-528D8A06D03B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>kirby</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading search for "{query}"</string>
+				<key>script</key>
+				<string>php index.php "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search Kirby docs…</string>
+				<key>title</key>
+				<string>Kirby Docs</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>F95DB7AE-82E7-4F5B-A7A2-23148205DF9D</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
-	<dict/>
+	<dict>
+		<key>4660B802-A6C8-46CA-B48B-528D8A06D03B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>305</integer>
+			<key>ypos</key>
+			<integer>85</integer>
+		</dict>
+		<key>F95DB7AE-82E7-4F5B-A7A2-23148205DF9D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>80</integer>
+			<key>ypos</key>
+			<integer>85</integer>
+		</dict>
+	</dict>
 	<key>webaddress</key>
 	<string>https://adamkiss.com</string>
 </dict>
