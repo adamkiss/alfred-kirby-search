@@ -102,7 +102,7 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>Kirby Docs Algolia search, in your Alfred.</string>
 	<key>uidata</key>
 	<dict>
 		<key>4660B802-A6C8-46CA-B48B-528D8A06D03B</key>
@@ -120,6 +120,8 @@
 			<integer>85</integer>
 		</dict>
 	</dict>
+	<key>version</key>
+	<string>0.1.0</string>
 	<key>webaddress</key>
 	<string>https://adamkiss.com</string>
 </dict>
