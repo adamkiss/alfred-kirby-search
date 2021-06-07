@@ -31,12 +31,17 @@ if ($results['nbHits'] === 0){
 }
 
 $alfredResults = array_map(function($hit){
+	$area = !is_null($hit['area']) ? ucfirst($hit['area']) : null;
+	$desc= html_entity_decode($hit['description']);
 	return [
 		'uid' => $hit['objectID'],
 		'title' => $hit['title'],
-		'subtitle' => !is_null($hit['area'])
-			? "{$hit['area']} • ${hit['description']}"
-			: $hit['description'],
+		'subtitle' => !is_null($area)
+			? "{$area} • {$desc}"
+			: $desc,
+		'icon' => [
+			"path" => is_string($area) ? "Icon-{$area}.png" : "icon.png"
+		],
 		'arg' => "https://getkirby.com/{$hit['objectID']}",
 		'quicklookurl' => "https://getkirby.com/{$hit['objectID']}",
 		'valid' => true
