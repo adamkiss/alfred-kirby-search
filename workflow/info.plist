@@ -79,11 +79,12 @@
 				<key>runningsubtext</key>
 				<string>Loading search for "{query}"</string>
 				<key>script</key>
-				<string>php index.php "{query}"</string>
+				<string>export PATH="/opt/homebrew/bin:/usr/local/bin:${PATH}"
+php index.php "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
-				<string></string>
+				<string>index.php</string>
 				<key>subtext</key>
 				<string>Search Kirby docs…</string>
 				<key>title</key>
@@ -123,7 +124,7 @@
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0.0</string>
+	<string>2.0.0</string>
 	<key>webaddress</key>
 	<string>https://adamkiss.com</string>
 </dict>
