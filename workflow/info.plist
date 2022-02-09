@@ -20,6 +20,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>5458410E-EEE2-4E9B-AFBF-51B642D3625A</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Copy to clipboard</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
@@ -101,6 +111,25 @@ php index.php "{query}"</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>5458410E-EEE2-4E9B-AFBF-51B642D3625A</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Kirby Docs Algolia search, in your Alfred.</string>
@@ -113,6 +142,13 @@ php index.php "{query}"</string>
 			<key>ypos</key>
 			<integer>85</integer>
 		</dict>
+		<key>5458410E-EEE2-4E9B-AFBF-51B642D3625A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>310</integer>
+			<key>ypos</key>
+			<integer>240</integer>
+		</dict>
 		<key>F95DB7AE-82E7-4F5B-A7A2-23148205DF9D</key>
 		<dict>
 			<key>xpos</key>
@@ -124,7 +160,7 @@ php index.php "{query}"</string>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>2.0.0</string>
+	<string>1.0.0</string>
 	<key>webaddress</key>
 	<string>https://adamkiss.com</string>
 </dict>
