@@ -47,12 +47,14 @@
 			<dict>
 				<key>browser</key>
 				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
 				<string></string>
-				<key>utf8</key>
-				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
@@ -115,7 +117,7 @@ php index.php "{query}"</string>
 			<key>config</key>
 			<dict>
 				<key>autopaste</key>
-				<false/>
+				<true/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
 				<key>ignoredynamicplaceholders</key>
@@ -138,25 +140,27 @@ php index.php "{query}"</string>
 		<key>4660B802-A6C8-46CA-B48B-528D8A06D03B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>305</integer>
+			<real>305</real>
 			<key>ypos</key>
-			<integer>85</integer>
+			<real>85</real>
 		</dict>
 		<key>5458410E-EEE2-4E9B-AFBF-51B642D3625A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>310</integer>
+			<real>310</real>
 			<key>ypos</key>
-			<integer>240</integer>
+			<real>240</real>
 		</dict>
 		<key>F95DB7AE-82E7-4F5B-A7A2-23148205DF9D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>80</integer>
+			<real>80</real>
 			<key>ypos</key>
-			<integer>85</integer>
+			<real>85</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
