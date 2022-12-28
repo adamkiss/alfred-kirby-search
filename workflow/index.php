@@ -21,9 +21,21 @@ $query = count($argv) > 1 ? $argv[1] : '';
 $algolia = SearchClient::create(ALG_APP, ALG_KEY);
 $index = $algolia->initIndex(ALG_IDX);
 
+if (preg_match('/^([gprck]) /i', $query, $m)) {
+	$area = [
+		'g' => 'guide',
+		'p' => 'plugin',
+		'r' => 'reference',
+		'c' => 'cookbook',
+		'k' => 'kosmos',
+	][strtolower($m[1])];
+	$query = substr($query, 2);
+}
+
 $results = $index->search($query, [
 	'hitsPerPage' => 30,
-	'X-Forwarded-For' => 'Alfred Workflow'
+	'X-Forwarded-For' => 'Alfred Workflow',
+	'filters' => $area ?? false ? "area:{$area}" : ''
 ]);
 
 if ($results['nbHits'] === 0){
@@ -40,7 +52,7 @@ $alfredResults = array_map(function($hit){
 			? "{$area} • {$desc}"
 			: $desc,
 		'icon' => [
-			"path" => is_string($area) ? "Icon-{$area}.png" : "icon.png"
+			"path" => is_string($area) ? "Icon-{$area}.png" : "Icon.png"
 		],
 		'arg' => "https://getkirby.com/{$hit['objectID']}",
 		'quicklookurl' => "https://getkirby.com/{$hit['objectID']}",
