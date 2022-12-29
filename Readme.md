@@ -4,31 +4,32 @@ An ultra-fast Kirby Docs search workflow for Alfred 5
 
 ![Screenshot](screenshot.jpg)
 
-## ⚠️ Prerequisites
+## ⚠️ You need to have PHP installed!
 
-Ensure you have PHP installed and available in terminal / shell. For macOS <12, PHP 7.3.X is already installed system-wide. For macOS 12+, the easiest way is to install [PHP](https://formulae.brew.sh/formula/php) via [Homebrew](https://brew.sh).
+You need PHP 8+ to run this workflow. The absolutely easiest way is to [download MAMP](https://www.mamp.info/en/downloads/). The next easiest, and much better for your hard drive is to install [PHP](https://formulae.brew.sh/formula/php) via [Homebrew](https://brew.sh). Once you install the PHP, note down the path to its binaries, and install the workflow.
 
-If you work with PHP installed in a different way (Docker, MAMP, ?), you should make the PHP executable installed that way available through `/usr/local/bin/php`, via symlink or other method.
+- Homebrew: `/opt/homebrew/bin`
+- MAMP: `/Applications/MAMP/bin/php/php8.0.8/bin`
 
 ## Installation
 
 1. [Download the latest version](https://github.com/adamkiss/alfred-kirby-search/releases)
 2. Install the workflow by double-clicking the `.alfredworkflow` file
-3. You can add the workflow to a category, then click "Import" to finish importing. You'll now see the workflow listed in the left sidebar of your Workflows preferences pane.
+3. During the import, there are two configurable fields:
+	- **PHP Usage script** - Here's where you can add shell code to locate your PHP binary. e.g.: `export PATH=/opt/homebrew/bin:$PATH`
+	- **Use Adam's shortcuts** - There's a number of pages that are missing from Kirby's Algolia Index
+4. You can use the search now :)
 
 ## Usage
 
-To search the [Kirby Docs](https://getkirby.com/docs/guide), just type `kd` followed by your search query.
-
-```
-kd <query>
-```
-
-If you want to specify area to focus your search, use the first letter of the area - `c, g, k, p, r` followed by a space, like so:
-
-```
-kd r <query>
-```
+- Open Alfred prompt
+- `kd <query>` - Search the Kirby docs
+- `kd <A> <query>` - if your query is preceded by a single letter - one of `[cgkpr]` - followed by a space, the query search will be limited to the area this letter refers to:
+	- <kbd>c</kbd> - Cookbook
+	- <kbd>g</kbd> - Guide
+	- <kbd>k</kbd> - Kosmos
+	- <kbd>p</kbd> - Plugins
+	- <kbd>r</kbd> - Reference
 
 ## Acknowledgments
 
