@@ -60,4 +60,33 @@ $alfredResults = array_map(function($hit){
 	];
 }, $results['hits']);
 
+/**
+ * Now prepend: custom Adam's results not tagged by index, if they match
+ */
+$shortcuts = [
+	'kt' => ['https://getkirby.com/docs/reference/text/kirbytags', 'KirbyText: Reference index'],
+	'help' => ['https://getkirby.com/docs/reference/templates/helpers', 'Helpers'],
+	'fmidx' => ['https://getkirby.com/docs/reference/templates/field-methods', 'Field methods index'],
+	'icons' => ['https://getkirby.com/docs/reference/panel/icons', 'Icon index'],
+	'allc' => ['https://getkirby.com/docs/reference/objects', 'All classes'],
+	'roots' => ['https://getkirby.com/docs/reference/system/roots', 'System > Roots'],
+	'validators' => ['https://getkirby.com/docs/reference/system/validators', 'System > Validators'],
+	'hooks' => ['https://getkirby.com/docs/reference/plugins/hooks', 'List of hooks'],
+	'uilist' => ['https://getkirby.com/docs/reference/plugins/ui', 'UI Kit Index'],
+	'tools' => ['https://getkirby.com/docs/reference/objects#toolkit', 'Toolkit']
+];
+if (getenv('user_adam_shortcuts') === '1' && $match = $shortcuts[$query] ?? false) {
+	array_unshift($alfredResults, [
+		'uid' => "adam-{$query}",
+		'title' => $match[1],
+		'subtitle' => "One of Adam's shortcuts",
+		'icon' => [
+			"path" =>"Icon-Adam.png"
+		],
+		'arg' => $match[0],
+		'quicklookurl' => $match[0],
+		'valid' => true
+	]);
+}
+
 results($alfredResults);

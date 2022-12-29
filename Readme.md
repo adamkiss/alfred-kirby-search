@@ -1,6 +1,6 @@
-# Kirby Docs search workflow for Alfred 4
+# Kirby Docs search workflow for Alfred 5
 
-An ultra-fast Kirby Docs search workflow for Alfred 4
+An ultra-fast Kirby Docs search workflow for Alfred 5
 
 ![Screenshot](screenshot.jpg)
 
@@ -24,6 +24,12 @@ To search the [Kirby Docs](https://getkirby.com/docs/guide), just type `kd` foll
 kd <query>
 ```
 
+If you want to specify area to focus your search, use the first letter of the area - `c, g, k, p, r` followed by a space, like so:
+
+```
+kd r <query>
+```
+
 ## Acknowledgments
 
 - Matt Clinton and their [Alfred Tailwind Docs search](https://github.com/clnt/alfred-tailwindcss-docs), which I used as a reference
@@ -31,6 +37,6 @@ kd <query>
 
 ## Copyright / License
 
-(c) 2021 Adam Kiss, licensed under [MIT License](https://github.com/adamkiss/alfred-kirby-search/blob/main/LICENSE).
+(c) 2021-2022 Adam Kiss, licensed under [MIT License](https://github.com/adamkiss/alfred-kirby-search/blob/main/LICENSE).
 
 ![Search by Algolia](algolia.png)
