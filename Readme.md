@@ -16,7 +16,7 @@ You need PHP 8+ to run this workflow. The absolutely easiest way is to [download
 1. [Download the latest version](https://github.com/adamkiss/alfred-kirby-search/releases)
 2. Install the workflow by double-clicking the `.alfredworkflow` file
 3. During the import, there are two configurable fields:
-	- **PHP Usage script** - Here's where you can add shell code to locate your PHP binary. e.g.: `export PATH=/opt/homebrew/bin:$PATH`
+	- **Shell command for PHP** - Here's where you can add shell code to locate your PHP binary. e.g.: `export PATH=/opt/homebrew/bin:$PATH`
 	- **Use Adam's shortcuts** - There's a number of pages that are missing from Kirby's Algolia Index
 4. You can use the search now :)
 
@@ -30,6 +30,17 @@ You need PHP 8+ to run this workflow. The absolutely easiest way is to [download
 	- <kbd>k</kbd> - Kosmos
 	- <kbd>p</kbd> - Plugins
 	- <kbd>r</kbd> - Reference
+- special shortcuts - There is a number of links missing from the index, but these specific were really missing for me, so if you check the "adam's shortcuts" checkbox, they'll be there for you:
+	- `kt` - KirbyText: Reference index
+	- `help` - Helpers
+	- `fmidx` - Field methods index
+	- `icons` - Icon index
+	- `allc` - All classes
+	- `roots` - System > Roots
+	- `validators` - System > Validators
+	- `hooks` - List of hooks
+	- `uilist` - UI Kit Index
+	- `tools` - Toolkit
 
 ## Acknowledgments
 
