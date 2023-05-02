@@ -44,7 +44,7 @@ if ($results['nbHits'] === 0){
 
 $alfredResults = array_map(function($hit){
 	$area = !is_null($hit['area']) ? ucfirst($hit['area']) : null;
-	$desc= html_entity_decode($hit['description']);
+	$desc= html_entity_decode($hit['intro'] ?? '');
 	return [
 		'uid' => $hit['objectID'],
 		'title' => $hit['title'],
