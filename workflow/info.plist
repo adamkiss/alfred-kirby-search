@@ -259,7 +259,7 @@ and it will be automatically prepended every time you search</string>
 		</dict>
 	</array>
 	<key>version</key>
-	<string>3.0.1</string>
+	<string>3.0.2</string>
 	<key>webaddress</key>
 	<string>https://adamkiss.com</string>
 </dict>
