@@ -2,6 +2,8 @@
 
 use Algolia\AlgoliaSearch\SearchClient;
 
+error_reporting(E_ALL & ~E_DEPRECATED);
+
 require_once __DIR__ . '/vendor/autoload.php';
 
 const ALG_APP = 'S7OGBIAJTV';
@@ -12,7 +14,7 @@ const ALG_IDX = 'getkirby-3';
 	Source: https://github.com/getkirby/getkirby.com/blob/main/site/config/search.php
 */
 
-function results(array $items){
+function results(array $items) {
 	echo json_encode(['items' => $items]);
 	exit;
 }
@@ -38,13 +40,13 @@ $results = $index->search($query, [
 	'filters' => $area ?? false ? "area:{$area}" : ''
 ]);
 
-if ($results['nbHits'] === 0){
+if ($results['nbHits'] === 0) {
 	results([]);
 }
 
-$alfredResults = array_map(function($hit){
+$alfredResults = array_map(function ($hit) {
 	$area = !is_null($hit['area']) ? ucfirst($hit['area']) : null;
-	$desc= html_entity_decode($hit['intro'] ?? '');
+	$desc = html_entity_decode($hit['intro'] ?? '');
 	return [
 		'uid' => $hit['objectID'],
 		'title' => $hit['title'],
@@ -52,7 +54,7 @@ $alfredResults = array_map(function($hit){
 			? "{$area} • {$desc}"
 			: $desc,
 		'icon' => [
-			"path" => is_string($area) ? "Icon-{$area}.png" : "Icon.png"
+			'path' => is_string($area) ? "Icon-{$area}.png" : 'Icon.png'
 		],
 		'arg' => "https://getkirby.com/{$hit['objectID']}",
 		'quicklookurl' => "https://getkirby.com/{$hit['objectID']}",
@@ -81,7 +83,7 @@ if (getenv('user_adam_shortcuts') === '1' && $match = $shortcuts[$query] ?? fals
 		'title' => $match[1],
 		'subtitle' => "One of Adam's shortcuts",
 		'icon' => [
-			"path" =>"Icon-Adam.png"
+			'path' => 'Icon-Adam.png'
 		],
 		'arg' => $match[0],
 		'quicklookurl' => $match[0],
