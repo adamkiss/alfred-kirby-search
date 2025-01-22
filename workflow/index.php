@@ -8,7 +8,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 const ALG_APP = 'S7OGBIAJTV';
 const ALG_KEY = 'd161a2f4cd2d69247c529a3371ad3050';
-const ALG_IDX = 'getkirby-3';
+const ALG_IDX = 'getkirby-4';
 /*
 	App ID / App Key are taken from getkirby.com, as allowed by Bastian in a private messages.
 	Source: https://github.com/getkirby/getkirby.com/blob/main/site/config/search.php
